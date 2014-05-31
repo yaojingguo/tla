@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>GCD</name>
+	<name>Euclid</name>
 	<comment></comment>
 	<projects>
 	</projects>
@@ -20,6 +20,11 @@
 		<nature>toolbox.natures.TLANature</nature>
 	</natures>
 	<linkedResources>
+		<link>
+			<name>Euclid.tla</name>
+			<type>1</type>
+			<location>/home/jing/code/github/tla/Euclid.tla</location>
+		</link>
 		<link>
 			<name>GCD.tla</name>
 			<type>1</type>
