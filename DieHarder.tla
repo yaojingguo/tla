@@ -1,11 +1,11 @@
 ----------------------------- MODULE DieHarder -----------------------------
-EXTENDS Integers
+EXTENDS Integers, TLC
 Min(m, n) == IF m < n THEN m ELSE n
 ----
 CONSTANTS Goal, Jugs, Capacity
 
 ASSUME /\ Goal \in Nat
-       /\ Capacity \in [Jugs |-> Nat \ {0}]
+       /\ Capacity \in [Jugs -> Nat \ {0}]
 
 (***************************************************************************
 --algorithm DieHarder {
@@ -50,5 +50,5 @@ Spec == Init /\ [][Next]_vars
 
 =============================================================================
 \* Modification History
-\* Last modified Wed Jun 04 15:00:43 CST 2014 by yaojingguo
+\* Last modified Wed Jun 04 16:04:12 CST 2014 by yaojingguo
 \* Created Wed Jun 04 14:07:37 CST 2014 by yaojingguo
