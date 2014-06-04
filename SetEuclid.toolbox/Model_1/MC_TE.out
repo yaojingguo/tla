@@ -27,8 +27,9 @@ Semantic processing of module MC
 SANY finished.
 @!@!@ENDMSG 2219 @!@!@
 @!@!@STARTMSG 2185:0 @!@!@
-Starting... (2014-06-04 10:58:35)
+Starting... (2014-06-04 13:56:02)
 @!@!@ENDMSG 2185 @!@!@
+<<"$!@$!@$!@$!@$!", 130>>
 @!@!@STARTMSG 2189:0 @!@!@
 Computing initial states...
 @!@!@ENDMSG 2189 @!@!@
@@ -40,34 +41,40 @@ Model checking completed. No error has been found.
   Estimates of the probability that TLC did not check all reachable states
   because two distinct states had the same fingerprint:
   calculated (optimistic):  val = 8.1E-19
-  based on the actual fingerprints:  val = 5.4E-17
+  based on the actual fingerprints:  val = 6.2E-18
 @!@!@ENDMSG 2193 @!@!@
 @!@!@STARTMSG 2201:0 @!@!@
-The coverage statistics at 2014-06-04 10:58:35
+The coverage statistics at 2014-06-04 13:56:02
 @!@!@ENDMSG 2201 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 16, col 12 to line 16, col 12 of module SetEuclid: 1
+  line 21, col 12 to line 21, col 16 of module SetEuclid: 1
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 16, col 15 to line 16, col 16 of module SetEuclid: 1
+  line 21, col 19 to line 21, col 19 of module SetEuclid: 1
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 26, col 28 to line 26, col 58 of module SetEuclid: 5
+  line 21, col 22 to line 21, col 23 of module SetEuclid: 1
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 27, col 24 to line 27, col 36 of module SetEuclid: 5
+  line 32, col 28 to line 32, col 58 of module SetEuclid: 5
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 28, col 24 to line 28, col 35 of module SetEuclid: 1
+  line 33, col 24 to line 33, col 36 of module SetEuclid: 5
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 29, col 24 to line 29, col 29 of module SetEuclid: 1
+  line 34, col 24 to line 34, col 35 of module SetEuclid: 1
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 35, col 24 to line 35, col 29 of module SetEuclid: 1
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 36, col 13 to line 36, col 26 of module SetEuclid: 6
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2202:0 @!@!@
 End of statistics.
 @!@!@ENDMSG 2202 @!@!@
 @!@!@STARTMSG 2200:0 @!@!@
-Progress(4) at 2014-06-04 10:58:35: 8 states generated (7,741 s/min), 5 distinct states found (4,838 ds/min), 0 states left on queue.
+Progress(4) at 2014-06-04 13:56:02: 8 states generated (2,580 s/min), 5 distinct states found (1,612 ds/min), 0 states left on queue.
 @!@!@ENDMSG 2200 @!@!@
 @!@!@STARTMSG 2199:0 @!@!@
 8 states generated, 5 distinct states found, 0 states left on queue.
@@ -76,5 +83,5 @@ Progress(4) at 2014-06-04 10:58:35: 8 states generated (7,741 s/min), 5 distinct
 The depth of the complete state graph search is 4.
 @!@!@ENDMSG 2194 @!@!@
 @!@!@STARTMSG 2186:0 @!@!@
-Finished. (2014-06-04 10:58:35)
+Finished. (2014-06-04 13:56:02)
 @!@!@ENDMSG 2186 @!@!@
