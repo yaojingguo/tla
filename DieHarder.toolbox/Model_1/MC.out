@@ -25,7 +25,7 @@ Semantic processing of module MC
 SANY finished.
 @!@!@ENDMSG 2219 @!@!@
 @!@!@STARTMSG 2185:0 @!@!@
-Starting... (2014-06-04 16:41:28)
+Starting... (2014-06-04 16:55:50)
 @!@!@ENDMSG 2185 @!@!@
 @!@!@STARTMSG 2189:0 @!@!@
 Computing initial states...
@@ -33,37 +33,71 @@ Computing initial states...
 @!@!@STARTMSG 2190:0 @!@!@
 Finished computing initial states: 1 distinct state generated.
 @!@!@ENDMSG 2190 @!@!@
-@!@!@STARTMSG 2193:0 @!@!@
-Model checking completed. No error has been found.
-  Estimates of the probability that TLC did not check all reachable states
-  because two distinct states had the same fingerprint:
-  calculated (optimistic):  val = 1.0E-17
-  based on the actual fingerprints:  val = 1.6E-18
-@!@!@ENDMSG 2193 @!@!@
+@!@!@STARTMSG 2110:1 @!@!@
+Invariant inv_1401872150098311000 is violated.
+@!@!@ENDMSG 2110 @!@!@
+@!@!@STARTMSG 2121:1 @!@!@
+The behavior up to this point is:
+@!@!@ENDMSG 2121 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+1: <Initial predicate>
+injug = (big :> 0 @@ small :> 0)
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+2: <Action line 37, col 12 to line 38, col 58 of module DieHarder>
+injug = (big :> 5 @@ small :> 0)
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+3: <Action line 41, col 12 to line 45, col 68 of module DieHarder>
+injug = (big :> 2 @@ small :> 3)
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+4: <Action line 39, col 12 to line 40, col 48 of module DieHarder>
+injug = (big :> 2 @@ small :> 0)
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+5: <Action line 41, col 12 to line 45, col 68 of module DieHarder>
+injug = (big :> 0 @@ small :> 2)
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+6: <Action line 37, col 12 to line 38, col 58 of module DieHarder>
+injug = (big :> 5 @@ small :> 2)
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+7: <Action line 41, col 12 to line 45, col 68 of module DieHarder>
+injug = (big :> 4 @@ small :> 3)
+
+@!@!@ENDMSG 2217 @!@!@
 @!@!@STARTMSG 2201:0 @!@!@
-The coverage statistics at 2014-06-04 16:41:29
+The coverage statistics at 2014-06-04 16:55:51
 @!@!@ENDMSG 2201 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 38, col 17 to line 38, col 58 of module DieHarder: 12
+  line 38, col 17 to line 38, col 58 of module DieHarder: 22
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 40, col 17 to line 40, col 48 of module DieHarder: 12
+  line 40, col 17 to line 40, col 48 of module DieHarder: 22
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 44, col 21 to line 45, col 68 of module DieHarder: 12
+  line 44, col 21 to line 45, col 68 of module DieHarder: 21
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2202:0 @!@!@
 End of statistics.
 @!@!@ENDMSG 2202 @!@!@
 @!@!@STARTMSG 2200:0 @!@!@
-Progress(3) at 2014-06-04 16:41:29: 37 states generated (4,180 s/min), 6 distinct states found (677 ds/min), 0 states left on queue.
+Progress(7) at 2014-06-04 16:55:51: 67 states generated (4,552 s/min), 13 distinct states found (883 ds/min), 2 states left on queue.
 @!@!@ENDMSG 2200 @!@!@
 @!@!@STARTMSG 2199:0 @!@!@
-37 states generated, 6 distinct states found, 0 states left on queue.
+67 states generated, 13 distinct states found, 2 states left on queue.
 @!@!@ENDMSG 2199 @!@!@
 @!@!@STARTMSG 2194:0 @!@!@
-The depth of the complete state graph search is 3.
+The depth of the complete state graph search is 7.
 @!@!@ENDMSG 2194 @!@!@
 @!@!@STARTMSG 2186:0 @!@!@
-Finished. (2014-06-04 16:41:29)
+Finished. (2014-06-04 16:55:51)
 @!@!@ENDMSG 2186 @!@!@
