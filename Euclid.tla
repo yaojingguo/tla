@@ -1,37 +1,33 @@
 ------------------------------- MODULE Euclid -------------------------------
 EXTENDS Integers, GCD, TLC
-CONSTANTS N
-ASSUME /\ N \in Nat \ {0}
+CONSTANTS M, N
+ASSUME /\ M \in Nat \ {0}
+       /\ N \in Nat \ {0}
         
 (***************************************************************************
 --fair algorithm Euclid {
- variables x \in 1..N, y \in 1..N, x0 = x, y0 = y;
+ variables x = M, y = N;
  { abc: while (x # y) { d: if (x < y) { y := y - x }
-                           else       { x := x - y }
-                      };
-   assert (x = y) /\ (x = GCD(x0, y0))                 
+                           else         { x := x - y }
+                      };              
  }
 }
  ***************************************************************************)
 \* BEGIN TRANSLATION
-VARIABLES x, y, x0, y0, pc
+VARIABLES x, y, pc
 
-vars == << x, y, x0, y0, pc >>
+vars == << x, y, pc >>
 
 Init == (* Global variables *)
-        /\ x \in 1..N
-        /\ y \in 1..N
-        /\ x0 = x
-        /\ y0 = y
+        /\ x = M
+        /\ y = N
         /\ pc = "abc"
 
 abc == /\ pc = "abc"
        /\ IF x # y
              THEN /\ pc' = "d"
-             ELSE /\ Assert((x = y) /\ (x = GCD(x0, y0)), 
-                            "Failure of assertion at line 12, column 4.")
-                  /\ pc' = "Done"
-       /\ UNCHANGED << x, y, x0, y0 >>
+             ELSE /\ pc' = "Done"
+       /\ UNCHANGED << x, y >>
 
 d == /\ pc = "d"
      /\ IF x < y
@@ -40,7 +36,6 @@ d == /\ pc = "d"
            ELSE /\ x' = x - y
                 /\ y' = y
      /\ pc' = "abc"
-     /\ UNCHANGED << x0, y0 >>
 
 Next == abc \/ d
            \/ (* Disjunct to prevent deadlock on termination *)
@@ -55,7 +50,7 @@ Termination == <>(pc = "Done")
 
 =============================================================================
 \* Modification History
-\* Last modified Tue Jun 03 15:18:54 CST 2014 by yaojingguo
+\* Last modified Tue Jun 03 16:21:26 CST 2014 by yaojingguo
 \* Last modified Tue Jun 03 11:00:10 CST 2014 by yaojingguo
 \* Last modified Sat May 31 17:16:19 CST 2014 by jing
 \* Created Sat May 31 16:03:52 CST 2014 by jing

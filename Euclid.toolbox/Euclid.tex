@@ -941,8 +941,9 @@
 \setboolean{shading}{true}
 \@x{}\moduleLeftDash\@xx{ {\MODULE} Euclid}\moduleRightDash\@xx{}%
 \@x{ {\EXTENDS} Integers ,\, GCD ,\, TLC}%
-\@x{ {\CONSTANTS} N}%
-\@x{ {\ASSUME} \.{\land} N \.{\in} Nat \.{\,\backslash\,} \{ 0 \}}%
+\@x{ {\CONSTANTS} M ,\, N}%
+\@x{ {\ASSUME} \.{\land} M \.{\in} Nat \.{\,\backslash\,} \{ 0 \}}%
+\@x{\@s{38.24} \.{\land} N\@s{1.53} \.{\in} Nat \.{\,\backslash\,} \{ 0 \}}%
 \@pvspace{8.0pt}%
 \begin{lcom}{5.0}%
 \begin{cpar}{0}{F}{F}{0}{0}{}%
@@ -953,17 +954,14 @@
 \pcalshadingtrue
 \csyntaxtrue
 \@x{ {\p@mmfair} {\p@algorithm} Euclid {\p@lbrace}}%
- \@x{\@s{4.1} {\p@variables} x \.{\in} 1 \.{\dotdot} N ,\, y \.{\in} 1
- \.{\dotdot} N ,\, x0 \.{=} x ,\, y0 \.{=} y {\p@semicolon}}%
+\@x{\@s{4.1} {\p@variables} x \.{=} M ,\, y \.{=} N {\p@semicolon}}%
  \@x{\@s{4.1} {\p@lbrace} abc\@s{.5}\textrm{:}\@s{3} {\p@while} {\p@lparen} x
  \.{\neq} y {\p@rparen} {\p@lbrace} d\@s{.5}\textrm{:}\@s{3} {\p@if}
- {\p@lparen} x \.{<} y {\p@rparen} {\p@lbrace} y \.{:=} y\@s{0.10} \.{-} x
+ {\p@lparen} x \.{<} y {\p@rparen} {\p@lbrace} y \.{:=} y \.{-} x
  {\p@rbrace}}%
- \@x{\@s{131.88} {\p@else}\@s{24.59} {\p@lbrace} x\@s{9.09} \.{:=} x \.{-} y
+ \@x{\@s{131.88} {\p@else}\@s{32.8} {\p@lbrace} x \.{:=} x \.{-} y
  {\p@rbrace}}%
 \@x{\@s{109.87} {\p@rbrace} {\p@semicolon}}%
- \@x{\@s{13.68} {\p@assert} ( x \.{=} y ) \.{\land} ( x \.{=} GCD ( x0 ,\, y0
- ) )}%
 \@x{\@s{4.1} {\p@rbrace}}%
 \@x{ {\p@rbrace}}%
 \@y{}%
@@ -979,30 +977,24 @@
  BEGIN TRANSLATION
 }%
 \@xx{}%
-\@x{ {\VARIABLES} x ,\, y ,\, x0 ,\, y0 ,\, pc}%
+\@x{ {\VARIABLES} x ,\, y ,\, pc}%
 \@pvspace{8.0pt}%
-\@x{ vars \.{\defeq} {\langle} x ,\, y ,\, x0 ,\, y0 ,\, pc {\rangle}}%
+\@x{ vars \.{\defeq} {\langle} x ,\, y ,\, pc {\rangle}}%
 \@pvspace{8.0pt}%
 \@x{ Init\@s{2.02} \.{\defeq}}%
 \@y{\@s{0}%
  Global variables
 }%
 \@xx{}%
-\@x{\@s{37.72} \.{\land} x \.{\in} 1 \.{\dotdot} N}%
-\@x{\@s{37.72} \.{\land} y\@s{0.10} \.{\in} 1 \.{\dotdot} N}%
-\@x{\@s{37.72} \.{\land} x0 \.{=} x}%
-\@x{\@s{37.72} \.{\land} y0\@s{0.10} \.{=} y}%
-\@x{\@s{37.72} \.{\land} pc\@s{1.07} \.{=}\@w{abc}}%
+\@x{\@s{37.72} \.{\land} x \.{=} M}%
+\@x{\@s{37.72} \.{\land} y\@s{0.10} \.{=} N}%
+\@x{\@s{37.72} \.{\land} pc \.{=}\@w{abc}}%
 \@pvspace{8.0pt}%
 \@x{ abc \.{\defeq} \.{\land} pc \.{=}\@w{abc}}%
 \@x{\@s{33.25} \.{\land} {\IF} x \.{\neq} y}%
 \@x{\@s{56.52} \.{\THEN} \.{\land} pc \.{'} \.{=}\@w{d}}%
- \@x{\@s{56.52} \.{\ELSE} \.{\land} Assert ( ( x \.{=} y ) \.{\land} ( x \.{=}
- GCD ( x0 ,\, y0 ) ) ,\,}%
-\@x{\@s{131.52}\@w{Failure\ of\ assertion\ at\ line\ 12,\ column\ 4.} )}%
-\@x{\@s{87.83} \.{\land} pc \.{'} \.{=}\@w{Done}}%
- \@x{\@s{33.25} \.{\land} {\UNCHANGED} {\langle} x ,\, y ,\, x0 ,\, y0
- {\rangle}}%
+\@x{\@s{56.52} \.{\ELSE} \.{\land} pc \.{'} \.{=}\@w{Done}}%
+\@x{\@s{33.25} \.{\land} {\UNCHANGED} {\langle} x ,\, y {\rangle}}%
 \@pvspace{8.0pt}%
 \@x{ d \.{\defeq} \.{\land} pc \.{=}\@w{d}}%
 \@x{\@s{25.03} \.{\land} {\IF} x \.{<} y}%
@@ -1011,7 +1003,6 @@
 \@x{\@s{48.29} \.{\ELSE} \.{\land} x \.{'} \.{=} x \.{-} y}%
 \@x{\@s{79.61} \.{\land} y \.{'}\@s{0.10} \.{=} y}%
 \@x{\@s{25.03} \.{\land} pc \.{'} \.{=}\@w{abc}}%
-\@x{\@s{25.03} \.{\land} {\UNCHANGED} {\langle} x0 ,\, y0 {\rangle}}%
 \@pvspace{8.0pt}%
 \@x{ Next \.{\defeq} abc \.{\lor} d}%
 \@x{\@s{52.13} \.{\lor}}%
@@ -1037,26 +1028,26 @@
 \setboolean{shading}{false}
 \begin{lcom}{0}%
 \begin{cpar}{0}{F}{F}{0}{0}{}%
-\ensuremath{\.{\,\backslash\,}\.{*}} Modification History
+\ensuremath{\.{\,\backslash\,}}* Modification History
 \end{cpar}%
 \begin{cpar}{0}{F}{F}{0}{0}{}%
- \ensuremath{\.{\,\backslash\,}\.{*}} Last modified \ensuremath{Tue}
- \ensuremath{Jun} 03 15:13:03 \ensuremath{CST} 2014 by \ensuremath{yaojingguo
+ \ensuremath{\.{\,\backslash\,}}* Last modified \ensuremath{Tue}
+ \ensuremath{Jun} 03 16:21:26 \ensuremath{CST} 2014 by \ensuremath{yaojingguo
 }%
 \end{cpar}%
 \begin{cpar}{0}{F}{F}{0}{0}{}%
- \ensuremath{\.{\,\backslash\,}\.{*}} Last modified \ensuremath{Tue}
+ \ensuremath{\.{\,\backslash\,}}* Last modified \ensuremath{Tue}
  \ensuremath{Jun} 03 11:00:10 \ensuremath{CST} 2014 by \ensuremath{yaojingguo
 }%
 \end{cpar}%
 \begin{cpar}{0}{F}{F}{0}{0}{}%
- \ensuremath{\.{\,\backslash\,}\.{*}} Last modified Sat May 31 17:16:19
+ \ensuremath{\.{\,\backslash\,}}* Last modified Sat May 31 17:16:19
  \ensuremath{CST} 2014 by \ensuremath{jing
 }%
 \end{cpar}%
 \begin{cpar}{0}{F}{F}{0}{0}{}%
- \ensuremath{\.{\,\backslash\,}\.{*}} Created Sat May 31 16:03:52
- \ensuremath{CST} 2014 by \ensuremath{jing
+ \ensuremath{\.{\,\backslash\,}}* Created Sat May 31 16:03:52 \ensuremath{CST}
+ 2014 by \ensuremath{jing
 }%
 \end{cpar}%
 \end{lcom}%

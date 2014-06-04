@@ -939,46 +939,83 @@
 \begin{document}
 \tlatex
 \setboolean{shading}{true}
-\@x{}\moduleLeftDash\@xx{ {\MODULE} GCD}\moduleRightDash\@xx{}%
-\@x{ {\EXTENDS} Integers}%
+\@x{}\moduleLeftDash\@xx{ {\MODULE} SetEuclid}\moduleRightDash\@xx{}%
+\@x{ {\EXTENDS} Integers ,\, GCD ,\, FiniteSets}%
 \@pvspace{8.0pt}%
-\@x{ Divides ( p ,\, n ) \.{\defeq}\@s{53.3}}%
-\begin{mcom}{228.88}%
+\begin{lcom}{5.0}%
 \begin{cpar}{0}{F}{F}{0}{0}{}%
-For integers \ensuremath{p} and \ensuremath{n}, equals
- \ensuremath{{\TRUE}} iff \ensuremath{p} divides \ensuremath{n} -- which
- I think is really neat; don\mbox{'}t
- you\.{?}
+**************************************************************************
 \end{cpar}%
-\end{mcom}%
-\@x{\@s{24.59} \E\, q \.{\in} Int \.{:}\@s{58.39}}%
-\@x{\@s{49.60} n \.{=} q \.{*} p\@s{41.11}}%
-\multivspace{3}%
+\end{lcom}%
+\pcalsymbolstrue
+\pcalshadingtrue
+\csyntaxtrue
+\@x{ {\p@mmfair} {\p@algorithm} SetEuclid {\p@lbrace}}%
+\@x{\@s{4.1} {\p@variables} S \.{=} \{ 2 ,\, 4 ,\, 6 \} {\p@semicolon}}%
+ \@x{\@s{4.1} {\p@lbrace} {\p@while} {\p@lparen} Cardinality ( S ) \.{>} 1
+ {\p@rparen} {\p@lbrace} {\p@with} {\p@lparen} x \.{\in} S ,\, y \.{\in} \{ s
+ \.{\in} S \.{:} s \.{>} x \} {\p@rparen}}%
+ \@x{\@s{164.59} {\p@lbrace} S \.{:=} ( S \.{\,\backslash\,} \{ y \} )
+ \.{\cup} \{ y \.{-} x \} {\p@rbrace}}%
+\@x{\@s{146.81} {\p@rbrace} {\p@semicolon}}%
+\@x{\@s{4.1} {\p@rbrace}}%
+\@x{ {\p@rbrace}}%
+\@y{}%
+\@xx{}%
+\pcalshadingfalse \pcalsymbolsfalse
+\begin{lcom}{7.5}%
+\begin{cpar}{0}{F}{F}{0}{0}{}%
+**************************************************************************
+\end{cpar}%
+\end{lcom}%
+\@x{}%
+\@y{\@s{0}%
+ BEGIN TRANSLATION
+}%
+\@xx{}%
+\@x{ {\VARIABLES} S ,\, pc}%
 \@pvspace{8.0pt}%
- \@x{ DivisorsOf ( n ) \.{\defeq} \{ p \.{\in} Int \.{:} Divides ( p ,\, n )
- \}}%
+\@x{ vars \.{\defeq} {\langle} S ,\, pc {\rangle}}%
 \@pvspace{8.0pt}%
-\@x{ SetMax ( S ) \.{\defeq}}%
- \@x{\@s{16.4} {\CHOOSE} i \.{\in} S \.{:} \A\, j \.{\in} S \.{:} i \.{\geq}
- j}%
+\@x{ Init\@s{2.02} \.{\defeq}}%
+\@y{\@s{0}%
+ Global variables
+}%
+\@xx{}%
+\@x{\@s{37.72} \.{\land} S \.{=} \{ 2 ,\, 4 ,\, 6 \}}%
+\@x{\@s{37.72} \.{\land} pc \.{=}\@w{Lbl\_1}}%
 \@pvspace{8.0pt}%
-\@x{ GCD ( m ,\, n ) \.{\defeq}}%
-\@x{\@s{23.38} SetMax ( DivisorsOf ( m ) \.{\cap} DivisorsOf ( n ) )}%
+\@x{ Lbl\_1 \.{\defeq} \.{\land} pc \.{=}\@w{Lbl\_1}}%
+\@x{\@s{42.84} \.{\land} {\IF} Cardinality ( S ) \.{>} 1}%
+\@x{\@s{66.11} \.{\THEN} \.{\land} \E\, x \.{\in} S \.{:}}%
+ \@x{\@s{116.73} \E\, y\@s{4.86} \.{\in} \{ s \.{\in} S \.{:} s \.{>} x \}
+ \.{:}}%
+ \@x{\@s{124.93} S \.{'} \.{=} ( ( S \.{\,\backslash\,} \{ y \} ) \.{\cup} \{
+ y \.{-} x \} )}%
+\@x{\@s{97.42} \.{\land} pc \.{'} \.{=}\@w{Lbl\_1}}%
+\@x{\@s{66.11} \.{\ELSE} \.{\land} pc \.{'} \.{=}\@w{Done}}%
+\@x{\@s{97.42} \.{\land} S \.{'} \.{=} S}%
 \@pvspace{8.0pt}%
- \@x{ SetGCD ( T ) \.{\defeq} SetMax ( \{ d \.{\in} Int \.{:} \A\, t \.{\in} T
- \.{:} Divides ( d ,\, t ) \} )}%
+\@x{ Next \.{\defeq} Lbl\_1}%
+\@x{\@s{52.13} \.{\lor}}%
+\@y{\@s{0}%
+ Disjunct to prevent deadlock on termination
+}%
+\@xx{}%
+\@x{\@s{63.24} ( pc \.{=}\@w{Done} \.{\land} {\UNCHANGED} vars )}%
 \@pvspace{8.0pt}%
- \@x{ {\THEOREM} GCD1 \.{\defeq} \A\, m \.{\in} Nat \.{\,\backslash\,} \{ 0 \}
- \.{:} GCD ( m ,\, m ) \.{=} m}%
+ \@x{ Spec\@s{1.46} \.{\defeq} \.{\land} Init \.{\land} {\Box} [ Next ]_{
+ vars}}%
+\@x{\@s{39.83} \.{\land} {\WF}_{ vars} ( Next )}%
 \@pvspace{8.0pt}%
- \@x{ {\THEOREM} GCD2 \.{\defeq} \A\, m ,\, n\@s{1.87} \.{\in} Nat
- \.{\,\backslash\,} \{ 0 \} \.{:} GCD ( m ,\, n ) \.{=} GCD ( n ,\, m )}%
+\@x{ Termination \.{\defeq} {\Diamond} ( pc \.{=}\@w{Done} )}%
 \@pvspace{8.0pt}%
- \@x{ {\THEOREM} GCD3 \.{\defeq} \A\, m ,\, n\@s{1.87} \.{\in} Nat
- \.{\,\backslash\,} \{ 0 \} \.{:}}%
- \@x{\@s{114.35} ( n \.{>} m ) \.{\implies} ( GCD ( m ,\, n ) \.{=} GCD ( m
- ,\, n \.{-} m ) )}%
-\@pvspace{8.0pt}%
+\@x{}%
+\@y{\@s{0}%
+ END TRANSLATION
+}%
+\@xx{}%
+\@pvspace{16.0pt}%
 \@x{}\bottombar\@xx{}%
 \setboolean{shading}{false}
 \begin{lcom}{0}%
@@ -987,22 +1024,12 @@ For integers \ensuremath{p} and \ensuremath{n}, equals
 \end{cpar}%
 \begin{cpar}{0}{F}{F}{0}{0}{}%
  \ensuremath{\.{\,\backslash\,}\.{*}} Last modified \ensuremath{Wed}
- \ensuremath{Jun} 04 10:21:15 \ensuremath{CST} 2014 by \ensuremath{yaojingguo
+ \ensuremath{Jun} 04 10:56:57 \ensuremath{CST} 2014 by \ensuremath{yaojingguo
 }%
 \end{cpar}%
 \begin{cpar}{0}{F}{F}{0}{0}{}%
- \ensuremath{\.{\,\backslash\,}\.{*}} Last modified \ensuremath{Tue}
- \ensuremath{Jun} 03 18:18:13 \ensuremath{CST} 2014 by \ensuremath{yaojingguo
-}%
-\end{cpar}%
-\begin{cpar}{0}{F}{F}{0}{0}{}%
- \ensuremath{\.{\,\backslash\,}\.{*}} Last modified Sat May 31 15:55:06
- \ensuremath{CST} 2014 by \ensuremath{jing
-}%
-\end{cpar}%
-\begin{cpar}{0}{F}{F}{0}{0}{}%
- \ensuremath{\.{\,\backslash\,}\.{*}} Created Sat May 31 09:50:23
- \ensuremath{CST} 2014 by \ensuremath{jing
+ \ensuremath{\.{\,\backslash\,}\.{*}} Created \ensuremath{Wed}
+ \ensuremath{Jun} 04 10:23:24 \ensuremath{CST} 2014 by \ensuremath{yaojingguo
 }%
 \end{cpar}%
 \end{lcom}%
