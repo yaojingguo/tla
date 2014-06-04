@@ -25,5 +25,10 @@
 			<type>1</type>
 			<location>C:/cygwin64/home/yaojingguo/tla/DieHarder.tla</location>
 		</link>
+		<link>
+			<name>GCD.tla</name>
+			<type>1</type>
+			<location>C:/cygwin64/home/yaojingguo/tla/GCD.tla</location>
+		</link>
 	</linkedResources>
 </projectDescription>

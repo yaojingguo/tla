@@ -940,13 +940,13 @@
 \tlatex
 \setboolean{shading}{true}
 \@x{}\moduleLeftDash\@xx{ {\MODULE} DieHarder}\moduleRightDash\@xx{}%
-\@x{ {\EXTENDS} Integers ,\, TLC}%
+\@x{ {\EXTENDS} Integers ,\, TLC ,\, GCD}%
 \@x{ Min ( m ,\, n ) \.{\defeq} {\IF} m \.{<} n \.{\THEN} m \.{\ELSE} n}%
 \@x{}\midbar\@xx{}%
 \@x{ {\CONSTANTS} Goal ,\, Jugs ,\, Capacity}%
 \@pvspace{8.0pt}%
 \@x{ {\ASSUME} \.{\land} Goal \.{\in} Nat}%
- \@x{\@s{38.24} \.{\land} Capacity \.{\in} [ Jugs \.{\mapsto} Nat
+ \@x{\@s{38.24} \.{\land} Capacity \.{\in} [ Jugs \.{\rightarrow} Nat
  \.{\,\backslash\,} \{ 0 \} ]}%
 \@pvspace{8.0pt}%
 \begin{lcom}{5.0}%
@@ -1045,7 +1045,7 @@
 \end{cpar}%
 \begin{cpar}{0}{F}{F}{0}{0}{}%
  \ensuremath{\.{\,\backslash\,}}* Last modified \ensuremath{Wed}
- \ensuremath{Jun} 04 15:57:15 \ensuremath{CST} 2014 by \ensuremath{yaojingguo
+ \ensuremath{Jun} 04 16:38:40 \ensuremath{CST} 2014 by \ensuremath{yaojingguo
 }%
 \end{cpar}%
 \begin{cpar}{0}{F}{F}{0}{0}{}%
