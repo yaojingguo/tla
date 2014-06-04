@@ -945,6 +945,98 @@
 \@x{}\midbar\@xx{}%
 \@x{ {\CONSTANTS} Goal ,\, Jugs ,\, Capacity}%
 \@pvspace{8.0pt}%
+\@x{ {\ASSUME} \.{\land} Goal \.{\in} Nat}%
+ \@x{\@s{38.24} \.{\land} Capacity \.{\in} [ Jugs \.{\mapsto} Nat
+ \.{\,\backslash\,} \{ 0 \} ]}%
+\@pvspace{8.0pt}%
+\begin{lcom}{5.0}%
+\begin{cpar}{0}{F}{F}{0}{0}{}%
+**************************************************************************
+\end{cpar}%
+\end{lcom}%
+\pcalsymbolstrue
+\pcalshadingtrue
+\csyntaxtrue
+\@x{ {\p@mmalgorithm} DieHarder {\p@lbrace}}%
+ \@x{\@s{8.2} {\p@variables} injug \.{=} [ j \.{\in} Jugs \.{\mapsto} 0 ]
+ {\p@semicolon}}%
+\@x{\@s{8.2} {\p@lbrace} {\p@while} {\p@lparen} {\TRUE} {\p@rparen}}%
+ \@x{\@s{21.88} {\p@lbrace} {\p@either} {\p@with} {\p@lparen} j \.{\in} Jugs
+ {\p@rparen}}%
+\@y{\@s{0}%
+ fill jug \ensuremath{j
+}}%
+\@xx{}%
+\@x{\@s{72.83} {\p@lbrace} injug [ j ] \.{:=} Capacity [ j ] {\p@rbrace}}%
+ \@x{\@s{31.46} {\p@or}\@s{18.84} {\p@with} {\p@lparen} j \.{\in} Jugs
+ {\p@rparen}}%
+\@y{\@s{0}%
+ empty jug \ensuremath{j
+}}%
+\@xx{}%
+\@x{\@s{72.83} {\p@lbrace} injug [ j ] \.{:=} 0 {\p@rbrace}}%
+ \@x{\@s{31.46} {\p@or}\@s{18.84} {\p@with} {\p@lparen} j \.{\in} Jugs ,\, k
+ \.{\in} Jugs \.{\,\backslash\,} \{ j \} {\p@rparen}}%
+\@y{\@s{0}%
+ pour from jug \ensuremath{j} to jug \ensuremath{k
+}}%
+\@xx{}%
+\@x{\@s{72.83} {\p@lbrace} {\p@with} {\p@lparen} poured \.{=}}%
+ \@x{\@s{125.11} Min ( injug [ j ] \.{+} injug [ k ] ,\, Capacity [ k ] )
+ \.{-} injug [ k ] {\p@rparen}}%
+ \@x{\@s{90.61} {\p@lbrace} injug [ j ]\@s{1.16} \.{:=} injug [ j ]\@s{1.16}
+ \.{-} poured \.{\p@barbar}}%
+\@x{\@s{100.20} injug [ k ] \.{:=} injug [ k ] \.{+} poured {\p@semicolon}}%
+\@x{\@s{90.61} {\p@rbrace}}%
+\@x{\@s{72.83} {\p@rbrace}}%
+\@x{\@s{21.88} {\p@rbrace}}%
+\@x{\@s{8.2} {\p@rbrace}}%
+\@x{ {\p@rbrace}}%
+\@y{}%
+\@xx{}%
+\pcalshadingfalse \pcalsymbolsfalse
+\begin{lcom}{7.5}%
+\begin{cpar}{0}{F}{F}{0}{0}{}%
+**************************************************************************
+\end{cpar}%
+\end{lcom}%
+\@x{}%
+\@y{\@s{0}%
+ BEGIN TRANSLATION
+}%
+\@xx{}%
+\@x{ {\VARIABLE} injug}%
+\@pvspace{8.0pt}%
+\@x{ vars\@s{2.10} \.{\defeq} {\langle} injug {\rangle}}%
+\@pvspace{8.0pt}%
+\@x{ Init\@s{4.12} \.{\defeq}}%
+\@y{\@s{0}%
+ Global variables
+}%
+\@xx{}%
+\@x{\@s{39.83} \.{\land} injug \.{=} [ j \.{\in} Jugs \.{\mapsto} 0 ]}%
+\@pvspace{8.0pt}%
+\@x{ Next \.{\defeq} \.{\lor} \.{\land} \E\, j \.{\in} Jugs \.{:}}%
+ \@x{\@s{70.25} injug \.{'} \.{=} [ injug {\EXCEPT} {\bang} [ j ] \.{=}
+ Capacity [ j ] ]}%
+\@x{\@s{39.83} \.{\lor} \.{\land} \E\, j \.{\in} Jugs \.{:}}%
+\@x{\@s{70.25} injug \.{'} \.{=} [ injug {\EXCEPT} {\bang} [ j ] \.{=} 0 ]}%
+\@x{\@s{39.83} \.{\lor} \.{\land} \E\, j \.{\in} Jugs \.{:}}%
+\@x{\@s{70.25} \E\, k \.{\in} Jugs \.{\,\backslash\,} \{ j \} \.{:}}%
+ \@x{\@s{78.45} \.{\LET} poured \.{\defeq} Min ( injug [ j ] \.{+} injug [ k ]
+ ,\, Capacity [ k ] ) \.{-} injug [ k ] \.{\IN}}%
+ \@x{\@s{86.65} injug \.{'} \.{=} [ injug {\EXCEPT} {\bang} [ j ]\@s{1.16}
+ \.{=} injug [ j ]\@s{1.16} \.{-} poured ,\,}%
+\@x{\@s{192.80} {\bang} [ k ] \.{=} injug [ k ] \.{+} poured ]}%
+\@pvspace{8.0pt}%
+\@x{ Spec\@s{1.46} \.{\defeq} Init \.{\land} {\Box} [ Next ]_{ vars}}%
+\@pvspace{8.0pt}%
+\@x{}%
+\@y{\@s{0}%
+ END TRANSLATION
+}%
+\@xx{}%
+\@pvspace{8.0pt}%
 \@x{}\bottombar\@xx{}%
 \setboolean{shading}{false}
 \begin{lcom}{0}%
@@ -953,7 +1045,7 @@
 \end{cpar}%
 \begin{cpar}{0}{F}{F}{0}{0}{}%
  \ensuremath{\.{\,\backslash\,}}* Last modified \ensuremath{Wed}
- \ensuremath{Jun} 04 14:23:25 \ensuremath{CST} 2014 by \ensuremath{yaojingguo
+ \ensuremath{Jun} 04 15:00:43 \ensuremath{CST} 2014 by \ensuremath{yaojingguo
 }%
 \end{cpar}%
 \begin{cpar}{0}{F}{F}{0}{0}{}%

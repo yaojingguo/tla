@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.5.27)  4 JUN 2014 14:23
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.5.27)  4 JUN 2014 15:01
 entering extended mode
 **DieHarder.tex
 (C:\cygwin64\home\yaojingguo\tla\DieHarder.toolbox\DieHarder.tex
@@ -119,32 +119,49 @@ LaTeX Font Info:    Try loading font information for U+lasy on input line 942.
 (C:\sw\MiKTeX2.9\tex\latex\base\ulasy.fd
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 )
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 960.
+
+(C:\sw\MiKTeX2.9\tex\latex\base\omscmr.fd
+File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/bx/n' in size <10> not available
+(Font)              Font shape `OMS/cmsy/b/n' tried instead on input line 960.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 952.
+(Font)              <8> on input line 968.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 952.
+(Font)              <6> on input line 968.
+
+Overfull \hbox (14.20227pt too wide) in paragraph at lines 1027--1029
+[][] 
+ []
+
 [1
 
-{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}] (C:\cygwin64\home\yaojing
-guo\tla\DieHarder.toolbox\DieHarder.aux) ) 
+{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}] [2] (C:\cygwin64\home\yao
+jingguo\tla\DieHarder.toolbox\DieHarder.aux) ) 
 Here is how much of TeX's memory you used:
- 1287 strings out of 493921
- 15543 string characters out of 3152079
- 68991 words of memory out of 3000000
- 4614 multiletter control sequences out of 15000+200000
- 8505 words of font info for 33 fonts, out of 3000000 for 9000
+ 1309 strings out of 493921
+ 15872 string characters out of 3152079
+ 81991 words of memory out of 3000000
+ 4631 multiletter control sequences out of 15000+200000
+ 9068 words of font info for 35 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 23i,10n,25p,234b,250s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/sw/MiKTeX2.9/fonts/type1/public/a
-msfonts/cm/cmcsc10.pfb><C:/sw/MiKTeX2.9/fonts/type1/public/amsfonts/cm/cmmi10.p
-fb><C:/sw/MiKTeX2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/sw/MiKTeX2.9/f
-onts/type1/public/amsfonts/cm/cmr5.pfb><C:/sw/MiKTeX2.9/fonts/type1/public/amsf
-onts/cm/cmr8.pfb><C:/sw/MiKTeX2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/
-sw/MiKTeX2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/sw/MiKTeX2.9/fonts/t
-ype1/public/amsfonts/cm/cmti8.pfb>
-Output written on DieHarder.pdf (1 page, 80745 bytes).
+ 24i,10n,25p,234b,322s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/sw/MiKTeX2.9/fonts/type1/publ
+ic/amsfonts/cm/cmbsy10.pfb><C:/sw/MiKTeX2.9/fonts/type1/public/amsfonts/cm/cmbx
+10.pfb><C:/sw/MiKTeX2.9/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/sw/MiKTe
+X2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/sw/MiKTeX2.9/fonts/type1/pub
+lic/amsfonts/cm/cmr10.pfb><C:/sw/MiKTeX2.9/fonts/type1/public/amsfonts/cm/cmr5.
+pfb><C:/sw/MiKTeX2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/sw/MiKTeX2.9/f
+onts/type1/public/amsfonts/cm/cmr9.pfb><C:/sw/MiKTeX2.9/fonts/type1/public/amsf
+onts/cm/cmsy10.pfb><C:/sw/MiKTeX2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C
+:/sw/MiKTeX2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/sw/MiKTeX2.9/fonts/
+type1/public/amsfonts/cm/cmti10.pfb><C:/sw/MiKTeX2.9/fonts/type1/public/amsfont
+s/cm/cmti7.pfb><C:/sw/MiKTeX2.9/fonts/type1/public/amsfonts/cm/cmti8.pfb><C:/sw
+/MiKTeX2.9/fonts/type1/public/amsfonts/latxfont/lasy10.pfb>
+Output written on DieHarder.pdf (2 pages, 154174 bytes).
 PDF statistics:
- 38 PDF objects out of 1000 (max. 8388607)
+ 69 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
