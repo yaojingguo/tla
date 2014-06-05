@@ -17,9 +17,11 @@
 <stringAttribute key="modelBehaviorNext" value=""/>
 <stringAttribute key="modelBehaviorSpec" value="Spec"/>
 <intAttribute key="modelBehaviorSpecType" value="1"/>
-<stringAttribute key="modelBehaviorVars" value="c, p, box"/>
+<stringAttribute key="modelBehaviorVars" value="c, p, pc, box"/>
 <booleanAttribute key="modelCorrectnessCheckDeadlock" value="true"/>
-<listAttribute key="modelCorrectnessInvariants"/>
+<listAttribute key="modelCorrectnessInvariants">
+<listEntry value="1pc[1] = &quot;c1&quot;"/>
+</listAttribute>
 <listAttribute key="modelCorrectnessProperties">
 <listEntry value="1A!Spec"/>
 </listAttribute>
