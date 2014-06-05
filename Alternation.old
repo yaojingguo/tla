@@ -47,8 +47,7 @@ Consumer == /\ b = 1
 
 Next == Producer \/ Consumer
 
-Spec == /\ Init /\ [][Next]_vars
-        /\ WF_vars(Consumer)
+Spec == Init /\ [][Next]_vars
 
 \* END TRANSLATION
 =============================================================================
