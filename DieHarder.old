@@ -27,13 +27,12 @@ ASSUME /\ Goal \in Nat
 }
  ***************************************************************************)
 \* BEGIN TRANSLATION
-CONSTANT defaultInitValue
 VARIABLE injug
 
 vars == << injug >>
 
 Init == (* Global variables *)
-        /\ injug = defaultInitValue
+        /\ injug = [j \in Jugs |-> 0]
 
 Next == \/ /\ \E j \in Jugs:
                 injug' = [injug EXCEPT ![j] = Capacity[j]]

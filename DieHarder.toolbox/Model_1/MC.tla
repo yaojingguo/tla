@@ -7,36 +7,36 @@ big, small
 ----
 
 \* MV CONSTANT definitions Jugs
-const_1401872150048306000 == 
+const_140204496685428000 == 
 {big, small}
 ----
 
 \* CONSTANT definitions @modelParameterConstants:1Goal
-const_1401872150058307000 == 
+const_140204496686429000 == 
 4
 ----
 
 \* CONSTANT definitions @modelParameterConstants:2Capacity
-const_1401872150068308000 == 
+const_140204496687430000 == 
 (big :> 5) @@ (small :> 3)
 ----
 
 \* CONSTANT definition @modelParameterDefinitions:0
-def_ov_1401872150078309000 ==
+def_ov_140204496688431000 ==
 -100..100
 ----
 \* SPECIFICATION definition @modelBehaviorSpec:0
-spec_1401872150088310000 ==
+spec_140204496689432000 ==
 Spec
 ----
 \* INVARIANT definition @modelCorrectnessInvariants:0
-inv_1401872150098311000 ==
+inv_140204496690433000 ==
 \A j \in Jugs: injug[j] # Goal
 ----
 \* INVARIANT definition @modelCorrectnessInvariants:1
-inv_1401872150108312000 ==
+inv_140204496691434000 ==
 \A j \in Jugs : Divides(SetGCD({Capacity[k]: k \in Jugs}), injug[j])
 ----
 =============================================================================
 \* Modification History
-\* Created Wed Jun 04 16:55:50 CST 2014 by yaojingguo
+\* Created Fri Jun 06 16:56:06 CST 2014 by yaojingguo

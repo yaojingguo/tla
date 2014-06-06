@@ -1,83 +1,76 @@
---------------------------------- MODULE HS ---------------------------------
-EXTENDS Integers
-
-a (+) b == (a + b) % 2
-
+------------------------------ MODULE AltSpec ------------------------------
 (***************************************************************************
---algorithm Handshake {
-
-    variables p = 0, c = 0 ;
-    process (Producer = 0)
+--algorithm AltSpec {
+ 
+    variables b = 0;
+ 
+    process (Producers = 0)
       { pe: while (TRUE)
-              {      await p =  c ;
+              {      await b = 0;
                 put: skip ;
-                px:  p := p (+) 1   }
+                px:  b := 1         }
       }
-      
+ 
     process (Consumer = 1)
       { ce: while (TRUE)
-              {      await p # c ;
+              {      await b = 1;
                 get: skip ;
-                cx:  c := c (+) 1  }
+                cx: b := 0         }
       }
 }
+
  ***************************************************************************)
 \* BEGIN TRANSLATION
-VARIABLES p, c, pc
+VARIABLES b, pc
 
-vars == << p, c, pc >>
+vars == << b, pc >>
 
 ProcSet == {0} \cup {1}
 
 Init == (* Global variables *)
-        /\ p = 0
-        /\ c = 0
+        /\ b = 0
         /\ pc = [self \in ProcSet |-> CASE self = 0 -> "pe"
                                         [] self = 1 -> "ce"]
 
 pe == /\ pc[0] = "pe"
-      /\ p =  c
+      /\ b = 0
       /\ pc' = [pc EXCEPT ![0] = "put"]
-      /\ UNCHANGED << p, c >>
+      /\ b' = b
 
 put == /\ pc[0] = "put"
        /\ TRUE
        /\ pc' = [pc EXCEPT ![0] = "px"]
-       /\ UNCHANGED << p, c >>
+       /\ b' = b
 
 px == /\ pc[0] = "px"
-      /\ p' = p (+) 1
+      /\ b' = 1
       /\ pc' = [pc EXCEPT ![0] = "pe"]
-      /\ c' = c
 
-Producer == pe \/ put \/ px
+Producers == pe \/ put \/ px
 
 ce == /\ pc[1] = "ce"
-      /\ p # c
+      /\ b = 1
       /\ pc' = [pc EXCEPT ![1] = "get"]
-      /\ UNCHANGED << p, c >>
+      /\ b' = b
 
 get == /\ pc[1] = "get"
        /\ TRUE
        /\ pc' = [pc EXCEPT ![1] = "cx"]
-       /\ UNCHANGED << p, c >>
+       /\ b' = b
 
 cx == /\ pc[1] = "cx"
-      /\ c' = c (+) 1
+      /\ b' = 0
       /\ pc' = [pc EXCEPT ![1] = "ce"]
-      /\ p' = p
 
 Consumer == ce \/ get \/ cx
 
-Next == Producer \/ Consumer
+Next == Producers \/ Consumer
 
 Spec == Init /\ [][Next]_vars
 
 \* END TRANSLATION
- 
-Alt == INSTANCE AltSpec WITH b <- p (+) c
 
 =============================================================================
 \* Modification History
-\* Last modified Fri Jun 06 16:37:04 CST 2014 by yaojingguo
-\* Created Fri Jun 06 16:27:49 CST 2014 by yaojingguo
+\* Last modified Fri Jun 06 16:09:46 CST 2014 by yaojingguo
+\* Created Fri Jun 06 16:06:16 CST 2014 by yaojingguo

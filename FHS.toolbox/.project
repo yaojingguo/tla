@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>HS</name>
+	<name>FHS</name>
 	<comment></comment>
 	<projects>
 	</projects>
@@ -26,9 +26,9 @@
 			<location>C:/cygwin64/home/yaojingguo/tla/AltSpec.tla</location>
 		</link>
 		<link>
-			<name>HS.tla</name>
+			<name>FHS.tla</name>
 			<type>1</type>
-			<location>C:/cygwin64/home/yaojingguo/tla/HS.tla</location>
+			<location>C:/cygwin64/home/yaojingguo/tla/FHS.tla</location>
 		</link>
 	</linkedResources>
 </projectDescription>
