@@ -965,7 +965,7 @@
  {\p@semicolon}}%
  \@x{\@s{51.20} p2\@s{.5}\textrm{:}\@s{3}\@s{0.76} box \.{:=} Put ( box )
  {\p@semicolon}}%
-\@x{\@s{68.98} p \.{:=} p \.{\oplus} 1}%
+\@x{\@s{51.20} p3\@s{.5}\textrm{:}\@s{3}\@s{0.76} p \.{:=} p \.{\oplus} 1}%
 \@x{\@s{47.10} {\p@rbrace}}%
 \@x{\@s{12.29} {\p@rbrace}}%
 \@x{\@s{4.1} {\p@fair} {\p@process} {\p@lparen} Consumer \.{=} 1 {\p@rparen}}%
@@ -974,7 +974,7 @@
 \@x{\@s{42.42} {\p@lbrace}\@s{16.4} {\p@await} p \.{\neq} c {\p@semicolon}}%
  \@x{\@s{50.62} c2\@s{.5}\textrm{:}\@s{3}\@s{1.34} box \.{:=} Get ( box )
  {\p@semicolon}}%
-\@x{\@s{68.40} c \.{:=} c \.{\oplus} 1}%
+\@x{\@s{50.62} c3\@s{.5}\textrm{:}\@s{3}\@s{1.34} c \.{:=} c \.{\oplus} 1}%
 \@x{\@s{42.42} {\p@rbrace}}%
 \@x{\@s{12.29} {\p@rbrace}}%
 \@x{ {\p@rbrace}}%
@@ -1017,12 +1017,17 @@
 \@pvspace{8.0pt}%
 \@x{ p2 \.{\defeq} \.{\land} pc [ 0 ] \.{=}\@w{p2}}%
 \@x{\@s{29.63} \.{\land} box \.{'} \.{=} Put ( box )}%
+ \@x{\@s{29.63} \.{\land} pc \.{'} \.{=} [ pc {\EXCEPT} {\bang} [ 0 ]
+ \.{=}\@w{p3} ]}%
+\@x{\@s{29.63} \.{\land} {\UNCHANGED} {\langle} p ,\, c {\rangle}}%
+\@pvspace{8.0pt}%
+\@x{ p3 \.{\defeq} \.{\land} pc [ 0 ] \.{=}\@w{p3}}%
 \@x{\@s{29.63} \.{\land} p \.{'} \.{=} p \.{\oplus} 1}%
  \@x{\@s{29.63} \.{\land} pc \.{'} \.{=} [ pc {\EXCEPT} {\bang} [ 0 ]
  \.{=}\@w{p1} ]}%
-\@x{\@s{29.63} \.{\land} c \.{'} \.{=} c}%
+\@x{\@s{29.63} \.{\land} {\UNCHANGED} {\langle} c ,\, box {\rangle}}%
 \@pvspace{8.0pt}%
-\@x{ Producer \.{\defeq} p1 \.{\lor} p2}%
+\@x{ Producer \.{\defeq} p1 \.{\lor} p2 \.{\lor} p3}%
 \@pvspace{8.0pt}%
 \@x{ c1 \.{\defeq} \.{\land} pc [ 1 ] \.{=}\@w{c1}}%
 \@x{\@s{29.05} \.{\land} p \.{\neq} c}%
@@ -1032,12 +1037,17 @@
 \@pvspace{8.0pt}%
 \@x{ c2 \.{\defeq} \.{\land} pc [ 1 ] \.{=}\@w{c2}}%
 \@x{\@s{29.05} \.{\land} box \.{'} \.{=} Get ( box )}%
+ \@x{\@s{29.05} \.{\land} pc \.{'} \.{=} [ pc {\EXCEPT} {\bang} [ 1 ]
+ \.{=}\@w{c3} ]}%
+\@x{\@s{29.05} \.{\land} {\UNCHANGED} {\langle} p ,\, c {\rangle}}%
+\@pvspace{8.0pt}%
+\@x{ c3 \.{\defeq} \.{\land} pc [ 1 ] \.{=}\@w{c3}}%
 \@x{\@s{29.05} \.{\land} c \.{'} \.{=} c \.{\oplus} 1}%
  \@x{\@s{29.05} \.{\land} pc \.{'} \.{=} [ pc {\EXCEPT} {\bang} [ 1 ]
  \.{=}\@w{c1} ]}%
-\@x{\@s{29.05} \.{\land} p \.{'} \.{=} p}%
+\@x{\@s{29.05} \.{\land} {\UNCHANGED} {\langle} p ,\, box {\rangle}}%
 \@pvspace{8.0pt}%
-\@x{ Consumer \.{\defeq} c1 \.{\lor} c2}%
+\@x{ Consumer \.{\defeq} c1 \.{\lor} c2 \.{\lor} c3}%
 \@pvspace{8.0pt}%
 \@x{ Next \.{\defeq} Producer \.{\lor} Consumer}%
 \@pvspace{8.0pt}%
@@ -1060,8 +1070,8 @@
 \ensuremath{\.{\,\backslash\,}}* Modification History
 \end{cpar}%
 \begin{cpar}{0}{F}{F}{0}{0}{}%
- \ensuremath{\.{\,\backslash\,}}* Last modified \ensuremath{Thu}
- \ensuremath{Jun} 05 15:37:54 \ensuremath{CST} 2014 by \ensuremath{yaojingguo
+ \ensuremath{\.{\,\backslash\,}}* Last modified \ensuremath{Fri}
+ \ensuremath{Jun} 06 10:06:49 \ensuremath{CST} 2014 by \ensuremath{yaojingguo
 }%
 \end{cpar}%
 \begin{cpar}{0}{F}{F}{0}{0}{}%
