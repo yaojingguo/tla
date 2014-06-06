@@ -11,9 +11,9 @@ a (+) b == (a + b) % 2
  variables p = 0, c = 0, box = << >>;
  fair process ( Producer = 0 )
    { p1:- while (TRUE)
-          {     await p =  c;
+          {      await p =  c;
             p2:- box := Put(box);
-            p3: p := p (+) 1
+            p3:  p := p (+) 1
            }
    }
  fair process ( Consumer = 1 )
@@ -80,6 +80,8 @@ Spec == /\ Init /\ [][Next]_vars
         /\ WF_vars(Consumer)
 
 \* END TRANSLATION
+
+
 A == INSTANCE Alternation WITH b <- p (+) c, box <- box
 vp == IF pc[0] = "p3" THEN p (+) 1 ELSE p
 vc == IF pc[1] = "c3" THEN c (+) 1 ELSE c
@@ -87,5 +89,5 @@ A2 == INSTANCE Alternation WITH b <- vp (+) vc
 
 =============================================================================
 \* Modification History
-\* Last modified Fri Jun 06 11:00:58 CST 2014 by yaojingguo
+\* Last modified Fri Jun 06 15:26:28 CST 2014 by yaojingguo
 \* Created Thu Jun 05 09:49:40 CST 2014 by yaojingguo
