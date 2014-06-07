@@ -1,0 +1,19 @@
+----------------------------- MODULE TickTock2 -----------------------------
+EXTENDS Integers
+(***************************************************************************
+--algorithm TickTock2 {
+    variable b = 0;
+    
+    process (TickTock \in {0, 1})
+      { t: while (TRUE)
+              { await b = self ;
+                b := (self + 1) % 2
+              }
+      }
+}
+ ***************************************************************************)
+
+=============================================================================
+\* Modification History
+\* Last modified Sat Jun 07 08:27:58 CST 2014 by yaojingguo
+\* Created Sat Jun 07 08:25:45 CST 2014 by yaojingguo
