@@ -5,7 +5,7 @@ EXTENDS Integers
 --algorithm OneBit {
    variable x = [i \in {0,1} |-> FALSE] ;
    fair process (P \in {0,1})
-    { ncs: while (TRUE)
+    { ncs:- while (TRUE)
              {      skip;
                e1:  x[self] := TRUE ;
                e2:  if (~x[1-self]) { cs: skip }
@@ -75,7 +75,7 @@ P(self) == ncs(self) \/ e1(self) \/ e2(self) \/ cs(self) \/ e3(self)
 Next == (\E self \in {0,1}: P(self))
 
 Spec == /\ Init /\ [][Next]_vars
-        /\ \A self \in {0,1} : WF_vars(P(self))
+        /\ \A self \in {0,1} : WF_vars((pc[self] # "ncs") /\ P(self))
 
 \* END TRANSLATION
 InCS(i) == pc[i] = "cs"
@@ -87,7 +87,9 @@ A == INSTANCE OneBitProtocol WITH x <- x,
 Trying(i) == pc[i] \in IF i = 0 THEN {"e1", "e2"}
                                 ELSE {"e1","e2","e3","e4"}
 DeadlockFree == (Trying(0) \/ Trying(1)) ~> (InCS(0)\/InCS(1))
+\* Other == INSTANCE OneBit2ProcsSync WITH x <- x, pc <- pc
+
 =============================================================================
 \* Modification History
-\* Last modified Sat Jun 07 16:07:34 CST 2014 by yaojingguo
+\* Last modified Sat Jun 07 17:25:02 CST 2014 by yaojingguo
 \* Created Sat Jun 07 15:15:55 CST 2014 by yaojingguo

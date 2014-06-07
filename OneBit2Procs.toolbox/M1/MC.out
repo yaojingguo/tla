@@ -13,10 +13,12 @@ Parsing file C:\sw\bin\toolbox\plugins\org.lamport.tlatools_1.0.0.201403132202\t
 Parsing file C:\sw\bin\toolbox\plugins\org.lamport.tlatools_1.0.0.201403132202\tla2sany\StandardModules\Integers.tla
 Parsing file C:\sw\bin\toolbox\plugins\org.lamport.tlatools_1.0.0.201403132202\tla2sany\StandardModules\Naturals.tla
 Parsing file OneBitProtocol.tla
+Parsing file OneBit2ProcsSync.tla
 Parsing file C:\sw\bin\toolbox\plugins\org.lamport.tlatools_1.0.0.201403132202\tla2sany\StandardModules\Sequences.tla
 Semantic processing of module Naturals
 Semantic processing of module Integers
 Semantic processing of module OneBitProtocol
+Semantic processing of module OneBit2ProcsSync
 Semantic processing of module OneBit2Procs
 Semantic processing of module Sequences
 Semantic processing of module TLC
@@ -25,7 +27,7 @@ Semantic processing of module MC
 SANY finished.
 @!@!@ENDMSG 2219 @!@!@
 @!@!@STARTMSG 2185:0 @!@!@
-Starting... (2014-06-07 17:25:06)
+Starting... (2014-06-07 17:07:57)
 @!@!@ENDMSG 2185 @!@!@
 @!@!@STARTMSG 2212:0 @!@!@
 Implied-temporal checking--satisfiability problem has 1 branches.
@@ -47,7 +49,7 @@ Model checking completed. No error has been found.
   based on the actual fingerprints:  val = 1.1E-15
 @!@!@ENDMSG 2193 @!@!@
 @!@!@STARTMSG 2201:0 @!@!@
-The coverage statistics at 2014-06-07 17:25:06
+The coverage statistics at 2014-06-07 17:07:57
 @!@!@ENDMSG 2201 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
   line 37, col 17 to line 37, col 48 of module OneBit2Procs: 12
@@ -104,7 +106,7 @@ The coverage statistics at 2014-06-07 17:25:06
 End of statistics.
 @!@!@ENDMSG 2202 @!@!@
 @!@!@STARTMSG 2200:0 @!@!@
-Progress(11) at 2014-06-07 17:25:06: 63 states generated (26,999 s/min), 31 distinct states found (13,285 ds/min), 0 states left on queue.
+Progress(11) at 2014-06-07 17:07:57: 63 states generated (27,591 s/min), 31 distinct states found (13,576 ds/min), 0 states left on queue.
 @!@!@ENDMSG 2200 @!@!@
 @!@!@STARTMSG 2199:0 @!@!@
 63 states generated, 31 distinct states found, 0 states left on queue.
@@ -113,5 +115,5 @@ Progress(11) at 2014-06-07 17:25:06: 63 states generated (26,999 s/min), 31 dist
 The depth of the complete state graph search is 11.
 @!@!@ENDMSG 2194 @!@!@
 @!@!@STARTMSG 2186:0 @!@!@
-Finished. (2014-06-07 17:25:06)
+Finished. (2014-06-07 17:07:57)
 @!@!@ENDMSG 2186 @!@!@

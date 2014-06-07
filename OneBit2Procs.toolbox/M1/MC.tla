@@ -2,17 +2,13 @@
 EXTENDS OneBit2Procs, TLC
 
 \* SPECIFICATION definition @modelBehaviorSpec:0
-spec_1402133105879105000 ==
+spec_140213207640896000 ==
 Spec
 ----
 \* PROPERTY definition @modelCorrectnessProperties:0
-prop_1402133105889106000 ==
-A!Spec
-----
-\* PROPERTY definition @modelCorrectnessProperties:1
-prop_1402133105899107000 ==
-DeadlockFree
+prop_140213207641897000 ==
+Other!Spec
 ----
 =============================================================================
 \* Modification History
-\* Created Sat Jun 07 17:25:05 CST 2014 by yaojingguo
+\* Created Sat Jun 07 17:07:56 CST 2014 by yaojingguo

@@ -8,16 +8,18 @@ Running in Model-Checking mode.
 Starting SANY...
 @!@!@ENDMSG 2220 @!@!@
 Parsing file MC.tla
-Parsing file OneBit2Procs.tla
+Parsing file OneBit2ProcsSync.tla
 Parsing file C:\sw\bin\toolbox\plugins\org.lamport.tlatools_1.0.0.201403132202\tla2sany\StandardModules\TLC.tla
 Parsing file C:\sw\bin\toolbox\plugins\org.lamport.tlatools_1.0.0.201403132202\tla2sany\StandardModules\Integers.tla
 Parsing file C:\sw\bin\toolbox\plugins\org.lamport.tlatools_1.0.0.201403132202\tla2sany\StandardModules\Naturals.tla
+Parsing file OneBit2Procs.tla
 Parsing file OneBitProtocol.tla
 Parsing file C:\sw\bin\toolbox\plugins\org.lamport.tlatools_1.0.0.201403132202\tla2sany\StandardModules\Sequences.tla
 Semantic processing of module Naturals
 Semantic processing of module Integers
 Semantic processing of module OneBitProtocol
 Semantic processing of module OneBit2Procs
+Semantic processing of module OneBit2ProcsSync
 Semantic processing of module Sequences
 Semantic processing of module TLC
 Semantic processing of module MC
@@ -25,7 +27,7 @@ Semantic processing of module MC
 SANY finished.
 @!@!@ENDMSG 2219 @!@!@
 @!@!@STARTMSG 2185:0 @!@!@
-Starting... (2014-06-07 17:25:06)
+Starting... (2014-06-07 17:10:49)
 @!@!@ENDMSG 2185 @!@!@
 @!@!@STARTMSG 2212:0 @!@!@
 Implied-temporal checking--satisfiability problem has 1 branches.
@@ -43,75 +45,72 @@ Checking temporal properties for the complete state space...
 Model checking completed. No error has been found.
   Estimates of the probability that TLC did not check all reachable states
   because two distinct states had the same fingerprint:
-  calculated (optimistic):  val = 5.4E-17
+  calculated (optimistic):  val = 4.9E-17
   based on the actual fingerprints:  val = 1.1E-15
 @!@!@ENDMSG 2193 @!@!@
 @!@!@STARTMSG 2201:0 @!@!@
-The coverage statistics at 2014-06-07 17:25:06
+The coverage statistics at 2014-06-07 17:10:50
 @!@!@ENDMSG 2201 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 37, col 17 to line 37, col 48 of module OneBit2Procs: 12
+  line 36, col 17 to line 36, col 48 of module OneBit2ProcsSync: 12
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 38, col 17 to line 38, col 22 of module OneBit2Procs: 12
+  line 37, col 17 to line 37, col 22 of module OneBit2ProcsSync: 12
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 41, col 16 to line 41, col 45 of module OneBit2Procs: 12
+  line 40, col 16 to line 40, col 45 of module OneBit2ProcsSync: 12
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 42, col 16 to line 42, col 47 of module OneBit2Procs: 12
+  line 41, col 16 to line 41, col 47 of module OneBit2ProcsSync: 12
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 46, col 27 to line 46, col 58 of module OneBit2Procs: 5
+  line 45, col 27 to line 45, col 58 of module OneBit2ProcsSync: 5
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 48, col 38 to line 48, col 69 of module OneBit2Procs: 4
+  line 47, col 38 to line 47, col 69 of module OneBit2ProcsSync: 4
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 49, col 38 to line 49, col 69 of module OneBit2Procs: 3
+  line 48, col 38 to line 48, col 69 of module OneBit2ProcsSync: 3
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 50, col 16 to line 50, col 21 of module OneBit2Procs: 12
+  line 49, col 16 to line 49, col 21 of module OneBit2ProcsSync: 12
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 54, col 16 to line 54, col 46 of module OneBit2Procs: 8
+  line 53, col 16 to line 53, col 46 of module OneBit2ProcsSync: 8
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 55, col 16 to line 55, col 21 of module OneBit2Procs: 8
+  line 54, col 16 to line 54, col 21 of module OneBit2ProcsSync: 8
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 58, col 16 to line 58, col 43 of module OneBit2Procs: 5
+  line 57, col 16 to line 57, col 43 of module OneBit2ProcsSync: 5
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 59, col 16 to line 59, col 47 of module OneBit2Procs: 5
+  line 58, col 16 to line 58, col 47 of module OneBit2ProcsSync: 5
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 64, col 27 to line 64, col 58 of module OneBit2Procs: 3
+  line 62, col 16 to line 62, col 47 of module OneBit2ProcsSync: 2
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 65, col 27 to line 65, col 58 of module OneBit2Procs: 2
+  line 63, col 16 to line 63, col 21 of module OneBit2ProcsSync: 2
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 66, col 16 to line 66, col 21 of module OneBit2Procs: 5
+  line 66, col 15 to line 66, col 45 of module OneBit2ProcsSync: 8
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 69, col 15 to line 69, col 45 of module OneBit2Procs: 8
-@!@!@ENDMSG 2221 @!@!@
-@!@!@STARTMSG 2221:0 @!@!@
-  line 70, col 15 to line 70, col 47 of module OneBit2Procs: 8
+  line 67, col 15 to line 67, col 47 of module OneBit2ProcsSync: 8
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2202:0 @!@!@
 End of statistics.
 @!@!@ENDMSG 2202 @!@!@
 @!@!@STARTMSG 2200:0 @!@!@
-Progress(11) at 2014-06-07 17:25:06: 63 states generated (26,999 s/min), 31 distinct states found (13,285 ds/min), 0 states left on queue.
+Progress(11) at 2014-06-07 17:10:50: 60 states generated (24,827 s/min), 31 distinct states found (12,827 ds/min), 0 states left on queue.
 @!@!@ENDMSG 2200 @!@!@
 @!@!@STARTMSG 2199:0 @!@!@
-63 states generated, 31 distinct states found, 0 states left on queue.
+60 states generated, 31 distinct states found, 0 states left on queue.
 @!@!@ENDMSG 2199 @!@!@
 @!@!@STARTMSG 2194:0 @!@!@
 The depth of the complete state graph search is 11.
 @!@!@ENDMSG 2194 @!@!@
 @!@!@STARTMSG 2186:0 @!@!@
-Finished. (2014-06-07 17:25:06)
+Finished. (2014-06-07 17:10:50)
 @!@!@ENDMSG 2186 @!@!@
