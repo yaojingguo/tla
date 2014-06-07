@@ -27,7 +27,7 @@ Init == (* Global variables *)
         /\ pc = [self \in ProcSet |-> "r"]
 
 r(self) == /\ pc[self] = "r"
-           /\ \/ /\ \E v \in BOOEAN:
+           /\ \/ /\ \E v \in BOOLEAN:
                       x' = [x EXCEPT ![self] = v]
                  /\ pc' = [pc EXCEPT ![self] = "r"]
               \/ /\ TRUE
@@ -53,11 +53,23 @@ P(self) == r(self) \/ e1(self) \/ e2(self) \/ cs(self)
 
 Next == (\E self \in {0,1}: P(self))
 
-Spec == Init /\ [][Next]_vars
+
 
 \* END TRANSLATION
+TypeOK == /\ pc \in [{0,1} -> {"r", "e1", "e2", "cs"}]
+          /\ x \in [{0,1} -> BOOLEAN]
 
+InCS(i) == pc[i] ="cs"
+
+MutualExclusion == ~(InCS(0) /\ InCS(1))
+
+Inv == /\ TypeOK
+       /\ MutualExclusion
+       /\ \A i \in {0,1} : InCS(i) \/ (pc[i] = "e2") => x[i]
+       
+Spec == Inv /\ [][Next]_vars       
+          
 =============================================================================
 \* Modification History
-\* Last modified Sat Jun 07 13:47:20 CST 2014 by yaojingguo
+\* Last modified Sat Jun 07 14:21:06 CST 2014 by yaojingguo
 \* Created Sat Jun 07 13:31:30 CST 2014 by yaojingguo

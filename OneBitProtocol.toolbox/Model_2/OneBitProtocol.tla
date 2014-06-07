@@ -53,7 +53,7 @@ P(self) == r(self) \/ e1(self) \/ e2(self) \/ cs(self)
 
 Next == (\E self \in {0,1}: P(self))
 
-Spec == Init /\ [][Next]_vars
+Spec == Init /\ [][Next]_vars       
 
 \* END TRANSLATION
 TypeOK == /\ pc \in [{0,1} -> {"r", "e1", "e2", "cs"}]
@@ -69,5 +69,5 @@ Inv == /\ TypeOK
           
 =============================================================================
 \* Modification History
-\* Last modified Sat Jun 07 16:05:16 CST 2014 by yaojingguo
+\* Last modified Sat Jun 07 14:33:44 CST 2014 by yaojingguo
 \* Created Sat Jun 07 13:31:30 CST 2014 by yaojingguo
